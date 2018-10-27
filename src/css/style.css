@@ -1,0 +1,139 @@
+@import 'reset';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  /* stylelint-disable-line */
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: #333333;
+}
+
+.flex {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  background: #02feff;
+  color: black;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-family: helvetica;
+  font-weight: bold;
+  /* font-size: 8vw; */
+  font-size: 4rem;
+  color: #02feff;
+  text-align: center;
+  line-height: 1.5;
+}
+
+h2 {
+  margin-bottom: 3rem;
+  font-family: helvetica;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.hide {
+  display: none;
+}
+
+.flash {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  animation: flash .5s linear;
+}
+
+main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3vw;
+  justify-items: center;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.card {
+  grid-column: 1 / -1;
+  width: 70vw;
+  max-width: 64rem;
+}
+
+.thumb {
+  position: relative;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+}
+
+.thumb:hover {
+  filter: none;
+}
+
+.thumb::before {
+  content: 'x';
+  position: absolute;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  background-color: white;
+  color: black;
+  opacity: 0;
+}
+
+.thumb:hover::before {
+  opacity: .7;
+}
+
+.removeThumb {
+  animation: flash .5s linear;
+}
+
+@keyframes flash {
+
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+
+}

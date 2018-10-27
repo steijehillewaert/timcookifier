@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Tim Cookifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128114264-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128114264-1');
+
+  </script>
+
+
+</head>
+
+<body>
+  <h1>Tim Cookifier</h1>
+  <h2>Druk op spatiebalk of de knop hieronder en download je persoonlijke foto met Tim Cook</h2>
+  <div class="flex">
+    <button class="button">Take a picture</button>
+  </div>
+  <audio src='assets/audio/beep.wav' preload='auto' class='beep'></audio>
+  <audio src='assets/audio/shutter.wav' preload='auto' class='shutter'></audio>
+
+  <div class="hide">
+    <img class="tim" src='assets/img/tim.png' class='dinner' alt='' width='700' height='700' />
+    <video class='video' autoplay width='700' height='700' playsinline></video>
+  </div>
+
+  <main>
+    <canvas class="card"></canvas>
+  </main>
+
+</body>
+
+</html>
